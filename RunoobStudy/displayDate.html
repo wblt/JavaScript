@@ -7,6 +7,10 @@
     <script>
         function displayDate() {
             document.getElementById("demo").innerHTML = Date();
+
+            x = document.getElementById("demo2");
+
+            x.innerHTML = "hello JavaScript";
         }
     </script>
 
@@ -18,6 +22,15 @@
 <p id="demo">这是一个段落</p>
 
 <button type="button" onclick="displayDate()">显示当前日期</button>
+
+<p>javaScript 能够做出对事件的响应</p>
+
+<button type="button" onclick="alert('欢迎')">点我</button>
+
+<p id="demo2">JavaScript 能改变html内容</p>
+
+<button type="button" onclick="displayDate()">改变内容</button>
+
 
 </body>
 </html>
