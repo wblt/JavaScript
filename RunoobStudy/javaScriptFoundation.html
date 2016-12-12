@@ -3,49 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>javaScript基础语法</title>
+
 </head>
+
 <body>
-<p>创建javaScript对象</p>
 
-<p id = "objectP"></p>
+    //1.
+<!--<p>javaScript 能够直接写入HTML输出流中</p>-->
+
+<!--<script>-->
+    <!--document.write("<h1>这是一个标题</h1>");-->
+    <!--document.write("<p>这是一个段落</p>");-->
+<!--</script>-->
+
+<!--<p>-->
+    <!--你只能在html输出流中使用<strong>document.write</strong>-->
+    <!--如果您在文档已加载后使用它，会覆盖整个文档。-->
+<!--</p>-->
+
+    //2.
+    <!--<p>javaScript 能够对事件做出相应</p>-->
+    <!--<button type="button" onclick="alert('欢迎！')">点我</button>-->
+
+    //3.
+    <!--<p>javaScript 能够改变html内容</p>-->
+    <!--<p id="demo">点击改变内容</p>-->
+    <!--<button type="button" onclick="changeText()">点击我</button>-->
+    <!--<script>-->
+        <!--function changeText() {-->
+            <!--//获取元素-->
+            <!--var x = document.getElementById("demo");-->
+            <!--x.innerHTML = "hello JavaScript";-->
+        <!--}-->
+    <!--</script>-->
 
 
-<script>
-    //javascript数组
-    var cars = new Array();
-    cars[0] = "saab";
-    cars[1] = "dfdf";
-    cars[2] = "dfdggd";
-    for(var i = 0;i<cars.length;i++) {
-//        document.write(cars[i]+"<br>");
-    }
 
-    //javascript对象的定义
-    var person = {
-        firstName : "wang",
-        lastName:"do",
-        id:5566,
-        age:50,
-        eyeColor:"blue",
-
-        //对象方法
-        fullName:function() {
-            return this.firstName + ' ' + this.lastName;
-        }
-    }
-//    document.write(person.firstName + "<br>");
-//    document.write(person.lastName + "<br>");
-
-//    var pText = document.getElementById("objectP");
-
-//    pText.innerHTML = person.firstName + "现在" + person.age + "岁";
-
-    //访问对象的方法
-//    pText.innerHTML = person.fullName();
-
-    
-
-</script>
 
 </body>
 </html>
