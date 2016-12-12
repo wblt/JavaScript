@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript基础语法</title>
+</head>
+<body>
+<p>创建javaScript对象</p>
+
+<p id = "objectP"></p>
+
+
+<script>
+    //javascript数组
+    var cars = new Array();
+    cars[0] = "saab";
+    cars[1] = "dfdf";
+    cars[2] = "dfdggd";
+    for(var i = 0;i<cars.length;i++) {
+//        document.write(cars[i]+"<br>");
+    }
+
+    //javascript对象的定义
+    var person = {
+        firstName : "wang",
+        lastName:"do",
+        id:5566,
+        age:50,
+        eyeColor:"blue",
+
+        //对象方法
+        fullName:function() {
+            return this.firstName + ' ' + this.lastName;
+        }
+    }
+//    document.write(person.firstName + "<br>");
+//    document.write(person.lastName + "<br>");
+
+//    var pText = document.getElementById("objectP");
+
+//    pText.innerHTML = person.firstName + "现在" + person.age + "岁";
+
+    //访问对象的方法
+//    pText.innerHTML = person.fullName();
+
+    
+
+</script>
+
+</body>
+</html>
