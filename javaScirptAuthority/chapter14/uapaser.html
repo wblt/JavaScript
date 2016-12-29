@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取浏览器的信息</title>
+    <script>
+        var browser = (function() {
+            var s = navigator.userAgent.toLowerCase();
+            var match = /(webkit)[ \/]([\w.]+)/.exec(s) ||
+                    /(opera)(?:.*version)?[ \/]([\w.]+)/.exec(s) ||
+                    /(msie) ([\w.]+)/.exec(s) ||
+                    !/compatible/.test(s) && /(mozilla)(?:.*? rv:([\w.]+))?/.exec(s) ||
+                    [];
+            return { name: match[1] || "", version: match[2] || "0" };
+        }());
+        document.write(browser);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

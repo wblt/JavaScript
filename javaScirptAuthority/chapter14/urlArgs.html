@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>url参数</title>
+
+    <script>
+
+        function urlArgs() {
+            var args = {};                             // Start with an empty object
+            var query = location.search.substring(1);  // Get query string, minus '?'
+            var pairs = query.split("&");              // Split at ampersands
+            for(var i = 0; i < pairs.length; i++) {    // For each fragment
+                var pos = pairs[i].indexOf('=');       // Look for "name=value"
+                if (pos == -1) continue;               // If not found, skip it
+                var name = pairs[i].substring(0,pos);  // Extract the name
+                var value = pairs[i].substring(pos+1); // Extract the value
+                value = decodeURIComponent(value);     // Decode the value
+                args[name] = value;                    // Store as a property
+            }
+            return args;                               // Return the parsed arguments
+        }
+
+//        function urlArgs() {
+//            var args = {};
+//            var query = location.search.substring(1);
+//            var pairs = query.split("&");
+//            for(var i = 0;i < pairs.length; i ++ ) {
+//                var pos = pairs[i].indexOf('=');
+//                if (pos == -1) {
+//                    continue;
+//                }
+//                var name = pairs[i].substring(0,pos);
+//                var value = pairs[i].substring(pos+1);
+//                value = decodeURIComponent(value);
+//                args[name] = value;
+//            }
+//            return args;
+//        }
+        var result = urlArgs();
+        document.write(result);
+    </script>
+
+</head>
+<body>
+
+
+
+
+
+</body>
+</html>

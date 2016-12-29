@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器应用函数</title>
+
+    <script type="application/javascript">
+        //被调用的函数
+        function f() {
+            document.write("dfdfd"+"<br/>");
+        }
+
+        function invoke(f,start,interval,end) {
+            if(!start) {
+                start = 0; //默认设置为0毫秒
+            }
+            if(arguments.length <= 2) { //单次调用模式
+                setTimeout(f,start); //若干毫秒之后 单次调用模式
+            } else { //多次调用模式
+                setTimeout(repeat,start);
+
+                function repeat () {
+                    var h = setInterval(f,interval); //循环调用f
+                    if(end) {
+                        setTimeout(function () {
+                            clearInterval(h);
+                        },end);
+                    }
+                }
+
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="invoke(f,0,2,10)" >
+            点我
+    </button>
+
+
+</body>
+</html>
