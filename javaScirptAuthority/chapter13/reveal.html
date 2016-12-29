@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签的显示和隐藏</title>
+
+    <style>
+        .reveal * {
+            display: none;
+        }
+        .reveal *.handle {
+            display: block;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            var elements = document.getElementsByClassName("reveal");
+            for(var i = 0; i < elements.length; i++ ) {
+                var elet = elements[i];
+                var title = elet.getElementsByClassName("handle")[0];
+                title.onclick = function() {
+                    if(elet.className == "reveal") {
+                        elet.className = "revealed";
+                    } else if(elet.className == "revealed") {
+                        elet.className = "reveal";
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        <h1 class="handle">
+            点击这个标题
+        </h1>
+        <p>
+            隐藏出现
+        </p>
+
+    </div>
+
+</body>
+</html>

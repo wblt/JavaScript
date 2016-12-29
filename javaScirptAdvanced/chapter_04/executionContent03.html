@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+
+    <script>
+        function buildUrl() {
+            var qs = "?debug = true";
+            with (location) {
+                var url = href + qs;
+            }
+            return url;
+        }
+
+        var result = buildUrl();
+
+        document.write(result);
+
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>
